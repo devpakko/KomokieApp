@@ -1,0 +1,136 @@
+/* Raleway font import */
+@import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100lvh;
+  opacity: 0; /* Initial state is invisible */
+  animation: fadeIn 1s forwards;
+}
+.auth img {
+  max-width: 175px;
+  margin: 1rem;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.auth form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  min-width: 170px;
+  max-width: 350px;
+  background-color: rgba(0, 0, 0, 0.631);
+  padding: 1rem 2rem 2rem 2rem;
+  border-radius: 5px;
+}
+.auth h2 {
+  font-size: 1rem;
+  margin-bottom: 0;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+.auth .error {
+  color: red;
+}
+.auth form input {
+  background-color: #333;
+  color: #f2f2f2;
+  width: 95%;
+  border: none;
+  padding: 1rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  border-bottom: 2px solid #333;
+}
+
+.auth form input:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(224, 224, 250);
+}
+
+.auth #background-image {
+  position: absolute;
+  max-width: max-content;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.6;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  object-fit: cover;
+}
+.auth button {
+  width: 100%;
+  padding: 1.4rem 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.auth #signinBtn {
+  background-color: red;
+  border: 1px solid rgb(218, 0, 0);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+  margin-top: 1rem;
+}
+.auth #signinBtn:hover {
+  background-color: rgb(218, 0, 0);
+}
+.auth #googleBtn {
+  background-color: rgb(67, 67, 251);
+  border: 1px solid rgb(67, 67, 251);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.auth #googleBtn:hover {
+  background-color: transparent;
+  border: 1px solid white;
+}
+.auth form p {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.499);
+}
+.auth i {
+  margin: 0 0.2rem;
+}
+.auth .signInSpan {
+  color: red;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* animation for initial load*/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

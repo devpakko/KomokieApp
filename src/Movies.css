@@ -1,0 +1,430 @@
+.movies header {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 14%,
+    rgba(0, 0, 0, 0.8715861344537815) 100%
+  );
+  padding: 0.1rem 0 1.3rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+.movies ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin-right: 2rem;
+}
+.movies li {
+  font-weight: 600;
+}
+.movies li i {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.movies li:nth-last-child(3) {
+  margin-right: auto;
+}
+.movies li a,
+.movies li a:visited {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.movies li a:hover {
+  color: rgb(221, 221, 221);
+}
+.movies .logo {
+  max-width: 130px;
+  margin: 0.2rem 1rem;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none;
+}
+.movies .search-container {
+  position: relative;
+  cursor: pointer;
+}
+.movies .search-input {
+  margin-right: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  visibility: hidden;
+  outline: none;
+}
+
+.movies .search-container:hover .search-input,
+.movies .search-container .search-input:focus {
+  opacity: 1;
+  visibility: visible;
+}
+.movies .logout-button {
+  position: absolute;
+  right: 22px;
+  top: 70px;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+.movies .fa-user-astronaut {
+  transition: 0.2s ease;
+}
+.movies .fa-user-astronaut:hover {
+  color: rgb(203, 203, 203);
+}
+.movies .fa-right-from-bracket {
+  border-radius: 50%;
+  background-color: rgb(36, 36, 36);
+  padding: 1rem;
+  animation: fadeInBottom 0.5s ease;
+  transition: 0.2s ease;
+}
+.movies .fa-right-from-bracket:hover {
+  background-color: rgb(65, 65, 65);
+}
+.movies .img-container {
+  width: 100%;
+  height: 90lvh;
+  margin: 0 auto;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.movies .trending {
+  position: relative;
+  animation: fadeIn 0.5s ease;
+}
+.movies .trending img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  z-index: -1;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+.movies .trending .details {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  z-index: 2;
+}
+.movies .trending .details .title {
+  width: 25ch;
+  font-size: 3rem;
+  margin: 30px 0;
+}
+.movies .trending .details input {
+  width: 120px;
+  padding: 0.8rem 0;
+  margin-right: 1rem;
+}
+.movies .trending .details #play {
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+.movies .trending .details #info {
+  border: none;
+  background-color: #333;
+  color: white;
+  transition: 0.2s ease;
+  border-radius: 5px;
+}
+.movies .trending .details #play:hover {
+  background-color: rgb(218, 0, 0);
+  cursor: pointer;
+}
+
+.movies .trending .details #info:hover {
+  cursor: pointer;
+  background-color: #444444;
+}
+
+.movies .trending .details .overview {
+  line-height: 1.5rem;
+  margin-top: 20px;
+  width: 35ch;
+  display: -webkit-box; /* Required for multi-line ellipsis */
+  -webkit-line-clamp: 2; /* Number of lines to show before truncating */
+  -webkit-box-orient: vertical; /* Specify the direction of the box */
+  overflow: hidden; /* Hide the overflow text */
+  text-overflow: ellipsis; /* Add the ellipsis (...) */
+}
+.movies {
+  position: relative;
+}
+
+.movies .main {
+  margin: 0 6rem;
+}
+
+.movies .main .category {
+  margin: 0;
+}
+
+.movies .slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 2rem 0;
+  margin-bottom: 5rem;
+}
+
+.movies .slider-content {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.movies .movie {
+  flex: 0 0 auto;
+  margin: 0 10px;
+  position: relative;
+}
+
+.movies .movie img {
+  width: 350px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movies .slider-btn {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.2s ease;
+}
+
+.movies .prev {
+  position: absolute;
+  left: -60px;
+}
+.movies .prev:hover {
+  background-color: rgba(68, 68, 68, 0.5);
+}
+
+.movies .next {
+  position: absolute;
+  right: -60px;
+}
+.movies .next:hover {
+  background-color: rgba(68, 68, 68, 0.5);
+}
+.movies .slider-content .movie {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.movies .slider-content .movie:hover {
+  transform: scale(1.2);
+}
+.slider-content:hover .movie:not(:hover) {
+  opacity: 0.2;
+}
+
+.poster-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  opacity: 0;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6867121848739496) 100%
+  );
+}
+
+.poster-details button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0;
+  transition: 0.2s ease;
+}
+.poster-details button:hover {
+  color: rgb(219, 219, 219);
+}
+.poster-details h3 {
+  margin-top: 5px;
+}
+.poster-categories {
+  font-size: 0.6rem;
+  color: rgb(207, 207, 207);
+}
+.movies .slider-content .movie:hover .poster-details {
+  opacity: 1;
+  animation: fadeInBottom 0.5s ease;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background-color: #202020;
+  padding: 0 0 20px 0;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  text-align: start;
+  animation: fadeInBottom 0.5s ease;
+}
+.modal-content img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.modal-content h2,
+.more-info {
+  padding: 0 1.5rem;
+}
+.modal-content p {
+  font-size: 0.9rem;
+}
+.modal-content p span {
+  color: grey;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Discover button (hidden by default) */
+.discover-btn {
+  display: none;
+  position: relative;
+  background-color: transparent; /* Change as needed */
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Overlay for navbar items */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease;
+}
+
+.nav-overlay-content {
+  text-align: center;
+}
+
+.nav-overlay-content a {
+  display: block;
+  margin: 10px 0;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.close-overlay {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+@media only screen and (max-width: 860px) {
+  .movies .slider {
+    margin-bottom: 150px;
+  }
+  .movies nav li:first-child {
+    display: block !important;
+    margin: 1rem auto 1rem 20px;
+  }
+  .movies nav li {
+    display: none;
+  }
+  .movies nav li:last-child {
+    display: block;
+    margin-bottom: 2rem;
+  }
+  .movies .search-input {
+    visibility: visible;
+    opacity: 1;
+  }
+  .discover-btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* animations */
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
