@@ -35,9 +35,11 @@ This project is a movie browsing application built with React. Users can registe
    ```
 
 2. Navigate to the project directory:
+
    ```
    cd movie-app
    ```
+
 3. Install dependencies:
    ```
    npm install
