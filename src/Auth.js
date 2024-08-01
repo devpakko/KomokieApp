@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Auth.css";
 
 // Import Firebase authentication functions

@@ -237,11 +237,11 @@
 .movies .slider-content .movie:hover {
   transform: scale(1.2);
 }
-.slider-content:hover .movie:not(:hover) {
+.movies .slider-content:hover .movie:not(:hover) {
   opacity: 0.2;
 }
 
-.poster-details {
+.movies .poster-details {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -258,7 +258,7 @@
   );
 }
 
-.poster-details button {
+.movies .poster-details button {
   background: transparent;
   cursor: pointer;
   border: none;
@@ -267,13 +267,13 @@
   padding: 0;
   transition: 0.2s ease;
 }
-.poster-details button:hover {
+.movies .poster-details button:hover {
   color: rgb(219, 219, 219);
 }
-.poster-details h3 {
+.movies .poster-details h3 {
   margin-top: 5px;
 }
-.poster-categories {
+.movies .poster-categories {
   font-size: 0.6rem;
   color: rgb(207, 207, 207);
 }
@@ -282,7 +282,7 @@
   animation: fadeInBottom 0.5s ease;
 }
 
-.modal-overlay {
+.movies .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -295,7 +295,7 @@
   z-index: 100;
 }
 
-.modal-content {
+.movies .modal-content {
   background-color: #202020;
   padding: 0 0 20px 0;
   border-radius: 8px;
@@ -306,22 +306,22 @@
   text-align: start;
   animation: fadeInBottom 0.5s ease;
 }
-.modal-content img {
+.movies .modal-content img {
   width: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-.modal-content h2,
-.more-info {
+.movies .modal-content h2,
+.movies .more-info {
   padding: 0 1.5rem;
 }
-.modal-content p {
+.movies .modal-content p {
   font-size: 0.9rem;
 }
-.modal-content p span {
+.movies .modal-content p span {
   color: grey;
 }
-.close-btn {
+.movies .close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -332,7 +332,7 @@
 }
 
 /* Discover button (hidden by default) */
-.discover-btn {
+.movies .discover-btn {
   display: none;
   position: relative;
   background-color: transparent; /* Change as needed */
@@ -345,7 +345,7 @@
 }
 
 /* Overlay for navbar items */
-.nav-overlay {
+.movies .nav-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -360,11 +360,11 @@
   animation: fadeIn 0.5s ease;
 }
 
-.nav-overlay-content {
+.movies .nav-overlay-content {
   text-align: center;
 }
 
-.nav-overlay-content a {
+.movies .nav-overlay-content a {
   display: block;
   margin: 10px 0;
   font-size: 20px;
@@ -373,7 +373,7 @@
   margin-bottom: 3rem;
 }
 
-.close-overlay {
+.movies .close-overlay {
   position: absolute;
   top: 10px;
   right: 20px;
@@ -401,7 +401,7 @@
     visibility: visible;
     opacity: 1;
   }
-  .discover-btn {
+  .movies .discover-btn {
     display: block;
     margin: 0 auto;
   }
